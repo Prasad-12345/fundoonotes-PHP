@@ -1,0 +1,351 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Your super  ApplicationAPI",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/newregister": {
+            "post": {
+                "summary": "register",
+                "description": "register",
+                "operationId": "",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "name":"example name",
+                                    "email":"example email",
+                                    "password":"example password"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+        "/api/addToNotes": {
+            "post": {
+                "summary": "add to notes",
+                "description": "add notes",
+                "operationId": "bf05c7b1c1a23feb1e33b43aa421772f",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "Title",
+                                    "Description"
+                                ],
+                                "properties": {
+                                    "Title": {
+                                        "type": "string"
+                                    },
+                                    "Description": {
+                                        "type": "text"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "Title":"example title",
+                                    "Description":"example content"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/login": {
+            "post": {
+                "summary": "login",
+                "description": "login",
+                "operationId": "bf05c7b1c1a23feb1e33b43aa421772f",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "email":"example email",
+                                    "password":"example password"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/addToLabel": {
+            "post": {
+                "summary": "add to label",
+                "description": "add label",
+                "operationId": "",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "label",
+                                    "title_id"
+                                ],
+                                "properties": {
+                                    "label": {
+                                        "type": "string"
+                                    },
+                                    "title_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "label":"example label",
+                                    "title_id":"example title_id"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                       
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/joinTable": {
+            "get": {
+                "summary": "join table",
+                "description": "join table",
+                "operationId": "",
+                "requestBody": {},
+                
+                "responses": {
+                    "201": {
+                        "description": "success"
+                       
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/delete": {
+            "post": {
+                "summary": "delete",
+                "description": "delete",
+                "operationId": "delete",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "userId"
+                                ],
+                                "properties": {
+                                    "userId": {
+                                        "userId": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "userId":"example userId"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/updateNotes": {
+            "post": {
+                "summary": "updateNotes",
+                "description": "updateNotes",
+                "operationId": "updateNotes",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "userId",
+                                    "Title",
+                                    "Description"
+                                ],
+                                "properties": {
+                                    "userId": {
+                                        "type": "string"
+                                    },
+                                    "Title": {
+                                        "type": "string"
+                                    },
+                                    "Description": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "userId":"example userId",
+                                    "Title":"example title",
+                                    "Description":"example description"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/updateLabel": {
+            "post": {
+                "summary": "updateLabel",
+                "description": "updateLabel",
+                "operationId": "updateLabel",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "userId",
+                                    "label",
+                                    "title_id"
+                                ],
+                                "properties": {
+                                    "userId": {
+                                        "type": "string"
+                                    },
+                                    "label": {
+                                        "type": "string"
+                                    },
+                                    "title_id": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object",
+                                "example":{
+                                    "userId":"example userId",
+                                    "label":"example label",
+                                    "title_id":"example title_id"
+                                }
+                            }
+                        }
+                
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "success"
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        },
+
+        "/api/userInfo": {
+            "get": {
+                "summary": "user",
+                "description": "user table",
+                "operationId": "",
+                "requestBody": {},
+                
+                "responses": {
+                    "201": {
+                        "description": "success"
+                       
+                    },
+                    "401": {
+                        "description": "Invalid credentials"
+                    }
+                }
+            }
+        }
+        
+    }
+}
